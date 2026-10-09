@@ -1,0 +1,10 @@
+body { margin: 0; }
+#h { position: sticky; top: 0; z-index: 1002; }
+.login-page { min-height: 100vh; background: #f2f3f3; display: flex; flex-direction: column; align-items: center; padding-top: 48px; }
+.login-card { width: 100%; max-width: 380px; background: #fff; border: 1px solid #d5dbdb; padding: 24px 28px 28px; box-sizing: border-box; }
+.login-logo { height: 32px; margin-bottom: 24px; }
+.mono { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; font-size: 13px; }
+.record-name-row { display: flex; align-items: center; gap: 8px; }
+.record-name-row > :first-child { flex: 1; }
+.record-name-suffix { white-space: nowrap; }
+.value-cell { white-space: pre-line; word-break: break-all; }

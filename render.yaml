@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: route53-clone-api
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////data/route53.db
+      - key: CORS_ORIGINS
+        sync: false          # set to your Vercel URL, e.g. https://route53-clone.vercel.app
+      - key: CORS_ORIGIN_REGEX
+        value: https://.*\.vercel\.app
